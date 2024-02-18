@@ -1,3 +1,6 @@
 console.log("TypeScript Learning");
 
-let age : number = 20;
+let sales = 789456123;       // type : number         
+let course = 'TypeScript';   // type : string
+let is_published = true;     // type : boolean
+let level;                   // type : any  
