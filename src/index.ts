@@ -25,3 +25,32 @@ let values: (string | number)[] = ['A', 2, 'B', 3, 4, 'C'];
 let employee: [number, string] = [1, "Steve"];
 console.log(employee[1].length);    // 5
 
+
+//type : enums
+const enum Size { Small = 1, Medium, larger };
+let mySize: Size = Size.Medium;
+
+console.log(mySize)
+
+
+// functions
+function calculateTax(income: number, taxYear: number): number {
+    if (taxYear < 2024) {
+        return income * 1.2;
+    }
+    return income * 1.3;
+}
+
+console.log(calculateTax(10000, 2012));
+
+// calling functions with missing arguments
+
+function calculateTax2(income: number, taxYear = 2024): number {
+    if (taxYear < 2024) {
+        return income * 1.2;
+    }
+    return income * 1.3;
+}
+
+// console.log(calculateTax2(10000)); This will throw an error if a default value is not set
+console.log(calculateTax2(10000));
