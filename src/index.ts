@@ -54,3 +54,38 @@ function calculateTax2(income: number, taxYear = 2024): number {
 
 // console.log(calculateTax2(10000)); This will throw an error if a default value is not set
 console.log(calculateTax2(10000));
+
+
+// objects
+let student: {
+    readonly id: number,
+    name: string
+} = {
+    id: 1,
+    name: "Parveen"
+}
+
+// To dynamically add value like
+// student.name = "Parveen"
+// it is required to set name property either to a empty string (name : '')
+// or can set it as a optional value (name?: string)
+
+console.log(student);
+
+// we can  change the id of student any time which is not valid
+// so to overcome this problem we can set id to readonly
+
+// type Aliases
+// to increase reusability of the code we can do 👇
+
+type Student = {
+    readonly id: number,
+    name: string
+}
+
+let student1: Student = {
+    id: 2,
+    name: "Rikhari"
+}
+
+console.log(student1);

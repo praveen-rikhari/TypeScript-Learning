@@ -28,4 +28,14 @@ function calculateTax2(income, taxYear = 2024) {
     return income * 1.3;
 }
 console.log(calculateTax2(10000));
+let student = {
+    id: 1,
+    name: "Parveen"
+};
+console.log(student);
+let student1 = {
+    id: 2,
+    name: "Rikhari"
+};
+console.log(student1);
 //# sourceMappingURL=index.js.map
