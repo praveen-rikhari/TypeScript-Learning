@@ -152,3 +152,29 @@ function greet(name: string | null | undefined) {
 }
 greet("parveen");
 greet(null);
+
+
+// Optional Chaining
+
+// Define a complex object with nested properties
+const user = {
+    id: 1,
+    name: "Bruce Wayne",
+    address: {
+      city: "Gotham",
+      postalCode: "101010"
+    }
+  };
+  
+  // Accessing properties using optional chaining
+  const userName = user.name;
+  const userCity = user.address?.city;
+  
+  console.log("User Name:", userName);
+  console.log("User City:", userCity);
+  
+  
+  // You can also chain multiple optional properties or methods
+  const userPostalCode = user.address?.postalCode?.toUpperCase(); // If `address` or `postalCode` is undefined, `userPostalCode` will be undefined
+  console.log("User Postal Code:", userPostalCode); // Output: User Postal Code: 10001 (or undefined if `address` is undefined)
+  

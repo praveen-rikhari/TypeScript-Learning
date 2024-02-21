@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b, _c;
 console.log("TypeScript Learning");
 let sales = 789456123;
 let course = 'TypeScript';
@@ -66,4 +67,18 @@ function greet(name) {
 }
 greet("parveen");
 greet(null);
+const user = {
+    id: 1,
+    name: "Bruce Wayne",
+    address: {
+        city: "Gotham",
+        postalCode: "101010"
+    }
+};
+const userName = user.name;
+const userCity = (_a = user.address) === null || _a === void 0 ? void 0 : _a.city;
+console.log("User Name:", userName);
+console.log("User City:", userCity);
+const userPostalCode = (_c = (_b = user.address) === null || _b === void 0 ? void 0 : _b.postalCode) === null || _c === void 0 ? void 0 : _c.toUpperCase();
+console.log("User Postal Code:", userPostalCode);
 //# sourceMappingURL=index.js.map
