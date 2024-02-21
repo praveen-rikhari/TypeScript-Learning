@@ -54,4 +54,16 @@ let textBox = {
     drag: () => { },
     resize: () => { }
 };
+let quantity = 100;
+let metric = 'cm';
+function greet(name) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else {
+        console.log("Name required....");
+    }
+}
+greet("parveen");
+greet(null);
 //# sourceMappingURL=index.js.map

@@ -119,7 +119,36 @@ type Resizeable = {
 
 type UIWidget = Draggable & Resizeable;
 
-let textBox : UIWidget = {
-    drag : () => {},
-    resize : () => {}
+let textBox: UIWidget = {
+    drag: () => { },
+    resize: () => { }
 }
+
+
+// Literal Types
+
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+// This below code will throw error
+// let quantity : Quantity = 10;
+
+type Metric = 'cm' | 'inch';
+let metric: Metric = 'cm'
+
+// This below code will throw error
+// let metric : Metric = 'mm';
+
+
+// Null Types
+
+function greet(name: string | null | undefined) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else {
+        console.log("Name required....")
+    }
+}
+greet("parveen");
+greet(null);
