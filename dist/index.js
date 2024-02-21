@@ -38,4 +38,20 @@ let student1 = {
     name: "Rikhari"
 };
 console.log(student1);
+function kgToLbs(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
+let numResult = kgToLbs(10);
+let strResult = kgToLbs('15');
+console.log(numResult);
+console.log(strResult);
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
 //# sourceMappingURL=index.js.map

@@ -87,5 +87,39 @@ let student1: Student = {
     id: 2,
     name: "Rikhari"
 }
-
 console.log(student1);
+
+
+// Union Types
+
+function kgToLbs(weight: number | string): number {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
+
+let numResult = kgToLbs(10);
+let strResult = kgToLbs('15');
+
+console.log(numResult);
+console.log(strResult);
+
+// Intersection Types
+
+type Draggable = {
+    drag: () => void
+}
+
+type Resizeable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizeable;
+
+let textBox : UIWidget = {
+    drag : () => {},
+    resize : () => {}
+}
